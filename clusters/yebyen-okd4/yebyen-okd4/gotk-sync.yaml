@@ -1,0 +1,32 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: flux-csh
+  namespace: yebyen-okd4
+spec:
+  interval: 1m0s
+  ref:
+    branch: main
+  secretRef:
+    name: flux-system
+  url: ssh://git@github.com/kingdonb/csh-flux
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  name: flux-csh
+  namespace: yebyen-okd4
+spec:
+  interval: 10m0s
+  path: ./clusters/yebyen-okd4
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-csh
+  validation: client
+#   decryption:
+#     provider: sops
+#     secretRef:
+#       name: sops-gpg
+
