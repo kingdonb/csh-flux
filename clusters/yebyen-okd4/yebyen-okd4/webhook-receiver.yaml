@@ -15,3 +15,5 @@ spec:
       name: flux-csh
     - kind: GitRepository
       name: any-old-app-main
+    - kind: GitRepository
+      name: any-old-app-prod
