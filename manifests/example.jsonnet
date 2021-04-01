@@ -33,9 +33,9 @@ local updateConfig(o) = (
 
 local kustomization = kustomize.applyList([
   updateConfig,
-  kustomize.namePrefix("staging-"),
-  kustomize.commonLabels({variant: "staging", org: "acmeCorporation"}),
-  kustomize.commonAnnotations({note: "Hello, I am staging!"}),
+//  kustomize.namePrefix("staging-"),
+  kustomize.commonLabels({variant: "production", org: "acmeCorporation"}),
+  kustomize.commonAnnotations({note: "Hello, I am production!"}),
 ]);
 
 std.map(kustomization, input)
