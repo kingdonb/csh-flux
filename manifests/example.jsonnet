@@ -25,7 +25,7 @@ local input =
 local updateConfig(o) = (
   if o.kind == "ConfigMap" && o.metadata.name == "the-map" then o + {
     data+: {
-      altGreeting: "Have a pineapple!",
+      altGreeting: "Have an ingress!",
       enableRisky: "true",
     },
   } else o

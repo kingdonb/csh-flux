@@ -14,7 +14,7 @@ pushd output
 git checkout $BRANCH --
 
 # Prepare the output to commit by itself in the deploy branch's root directory.
-mv -f ./ ../    # Overwrite any existing files (no garbage collection here)
+mv -f ./production.yaml ../    # Overwrite any existing files (no garbage collection here)
 git diff
 
 # All done (the commit will take place in the next action!)
