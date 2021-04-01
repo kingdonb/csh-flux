@@ -3,3 +3,5 @@ kind: Kustomization
 resources:
 - gotk-sync.yaml
 # - gotk-components.yaml
+- webhook-token-secret.yaml
+- webhook-receiver.yaml
