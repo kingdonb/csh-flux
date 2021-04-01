@@ -5,7 +5,7 @@ metadata:
   name: flux-csh
   namespace: yebyen-okd4
 spec:
-  interval: 1m0s
+  interval: 20m0s
   ref:
     branch: main
   secretRef:
