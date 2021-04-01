@@ -3,7 +3,6 @@ kind: Kustomization
 resources:
 - gitno-hephy-rocks-ingress.yaml
 - gotk-sync.yaml
-# - gotk-components.yaml
 - notification-controller.yaml
-- webhook-token-secret.yaml
 - webhook-receiver.yaml
+- webhook-token-secret.yaml
