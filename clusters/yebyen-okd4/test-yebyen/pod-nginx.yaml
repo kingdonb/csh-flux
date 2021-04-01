@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: webserver
-  nameserver: test-yebyen
+  namespace: test-yebyen
 spec:
   containers:
   - name: webserver
