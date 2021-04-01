@@ -23,28 +23,8 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
 
-      - name: "Download kubecfg binary to tmp"
-        shell: bash
-        run: |
-          VERSION=0.18.0
-          if [ -z $VERSION ]; then
-            VERSION=$(curl https://api.github.com/repos/bitnami/kubecfg/releases/latest -sL | grep tag_name | sed -E 's/.*"([^"]+)".*/\1/' | cut -c 2-)
-          fi
-          BIN_URL="https://github.com/bitnami/kubecfg/releases/download/v${VERSION}/kubecfg-linux-amd64"
-          curl -sL ${BIN_URL} -o /tmp/kubecfg
-          chmod +x /tmp/kubecfg
-      - name: "Add kubecfg binary to /usr/local/bin"
-        shell: bash
-        run: |
-          sudo cp /tmp/kubecfg /usr/local/bin
-      - name: "Cleanup tmp"
-        shell: bash
-        run: |
-          rm -f /tmp/kubecfg
-      - name: "Verify correct installation of binary"
-        shell: bash
-        run: |
-          kubecfg version
+      - name: Setup kubecfg CLI
+        uses: kingdonb/kubecfg/action@main
 
       - name: kubecfg show
         run: kubecfg show manifests/example.jsonnet > output/production.yaml
