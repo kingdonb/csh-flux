@@ -66,8 +66,8 @@ spec:
 ---
 apiVersion: v1
 data:
-  altGreeting: Have an ingress!
-  enableRisky: "true"
+  altGreeting: Good Afternoon!
+  enableRisky: "false"
 kind: ConfigMap
 metadata:
   annotations:
