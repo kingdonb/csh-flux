@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  GIT_SHA: 8ce42dba
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: any-old-app-version
