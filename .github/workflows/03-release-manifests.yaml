@@ -1,4 +1,4 @@
-# ./.github/workflows/release-manifests.yaml
+# ./.github/workflows/03-release-manifests.yaml
 name: Build jsonnet
 on:
   push:
