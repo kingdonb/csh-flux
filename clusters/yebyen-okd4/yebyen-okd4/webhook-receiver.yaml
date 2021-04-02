@@ -17,3 +17,5 @@ spec:
       name: any-old-app-main
     - kind: GitRepository
       name: any-old-app-prod
+    - kind: GitRepository
+      name: any-old-app-deploy
