@@ -20,7 +20,7 @@ metadata:
 spec:
   interval: 10m0s
   path: ./clusters/yebyen-okd4
-  prune: false
+  prune: true
   sourceRef:
     kind: GitRepository
     name: flux-csh
