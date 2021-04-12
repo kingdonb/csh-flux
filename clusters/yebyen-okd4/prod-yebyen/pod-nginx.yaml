@@ -3,6 +3,7 @@ kind: Pod
 metadata:
   name: webserver
 spec:
+  serviceAccountName: prod
   containers:
   - name: webserver
     image: nginx:latest
