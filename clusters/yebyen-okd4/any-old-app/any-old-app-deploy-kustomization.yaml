@@ -12,3 +12,7 @@ spec:
     kind: GitRepository
     name: any-old-app-deploy
   validation: server
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-gpg
