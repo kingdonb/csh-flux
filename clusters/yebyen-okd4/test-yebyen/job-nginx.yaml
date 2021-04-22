@@ -12,5 +12,7 @@ spec:
       - image: nginx:1.19.9
         name: webserverjob
         resources: {}
+      volumes:
+        - mountPath: /var/cache/nginx/client_temp
+          emptyDir: {}
       restartPolicy: Never
-status: {}
