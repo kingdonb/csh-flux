@@ -1,6 +1,8 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
+  annotations:
+    runAgain: "1"
   creationTimestamp: null
   name: webserverjob
 spec:
