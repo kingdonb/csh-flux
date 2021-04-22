@@ -6,6 +6,6 @@ spec:
   serviceAccountName: prod
   containers:
   - name: webserver
-    image: nginx:1.19.8
+    image: nginx:1.19.9
     ports:
     - containerPort: 80
