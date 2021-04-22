@@ -9,10 +9,7 @@ spec:
       creationTimestamp: null
     spec:
       containers:
-      - image: nginx:1.19.9
+      - image: twalter/openshift-nginx:stable
         name: webserverjob
         resources: {}
-      volumes:
-        - mountPath: /var/cache/nginx/client_temp
-          emptyDir: {}
       restartPolicy: Never
