@@ -17,6 +17,8 @@ spec:
     tcp:
       "2222": "deis/deis-builder:2222"
     controller:
+      hostNetwork: true
+      useHostPort: true
       extraArgs:
         enable-ssl-passthrough: ""
       kind: DaemonSet
