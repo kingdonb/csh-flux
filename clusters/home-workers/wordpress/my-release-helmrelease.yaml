@@ -58,4 +58,4 @@ spec:
       enabled: false
     service:
       type: ClusterIP
-    wordpressSkipInstall: true
+    wordpressSkipInstall: false
