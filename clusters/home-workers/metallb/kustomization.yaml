@@ -1,0 +1,6 @@
+namespace: metallb-system
+
+resources:
+  - github.com/metallb/metallb//manifests?ref=v0.9.6
+  - metallb-configmap.yaml 
+#  - metallb-memberlist-secret.yaml
