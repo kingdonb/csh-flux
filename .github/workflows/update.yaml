@@ -3,7 +3,7 @@ name: update-flux
 on:
   workflow_dispatch:
   schedule:
-    - cron: "12 * * * *"
+    - cron: "29 * * * *"
 
 jobs:
   components:
@@ -22,6 +22,8 @@ jobs:
             --export > ./clusters/kind-flux-wsl/flux-system/gotk-components.yaml
           flux install --components-extra=image-reflector-controller,image-automation-controller \
             --export > ./clusters/home-workers/flux-system/gotk-components.yaml
+          flux install --components-extra=image-reflector-controller,image-automation-controller \
+            --export > ./clusters/civo-flux-k3s/flux-system/gotk-components.yaml
 
           VERSION="$(flux -v)"
           echo "::set-output name=flux_version::$VERSION"
