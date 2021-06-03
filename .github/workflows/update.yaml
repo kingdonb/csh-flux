@@ -3,7 +3,7 @@ name: update-flux
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "12 * * * *"
 
 jobs:
   components:
@@ -19,7 +19,7 @@ jobs:
           flux install --components-extra=image-reflector-controller,image-automation-controller \
             --export > ./clusters/kind-oracle-aarch64/flux-system/gotk-components.yaml
           flux install --components-extra=image-reflector-controller,image-automation-controller \
-            --export > ./clusters/kind-wsl-flux/flux-system/gotk-components.yaml
+            --export > ./clusters/kind-flux-wsl/flux-system/gotk-components.yaml
           flux install --components-extra=image-reflector-controller,image-automation-controller \
             --export > ./clusters/home-workers/flux-system/gotk-components.yaml
 
