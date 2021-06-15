@@ -22,7 +22,7 @@ spec:
   values:
     ingress:
       enabled: true
-      hostname: hpworker01.nerdland.local
+      hostname: kateblog.nerdland.local
     service:
       type: ClusterIP
     wordpressPassword: changeMe7654
