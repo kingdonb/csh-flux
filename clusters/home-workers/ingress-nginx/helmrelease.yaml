@@ -17,13 +17,13 @@ spec:
     tcp:
       "2222": "deis/deis-builder:2222"
     controller:
-      hostNetwork: true
-      useHostPort: true
+      hostNetwork: false
+      useHostPort: false
       extraArgs:
         enable-ssl-passthrough: ""
-      kind: DaemonSet
+      kind: Deployment
       service:
-        type: NodePort
+        type: LoadBalancer
         nodePorts:
           http: 32082
           https: 32443
