@@ -50,12 +50,12 @@ spec:
       storageClass: local-path
     ingress:
       certManager: false
-      enabled: true
+      enabled: false
       # hostname: wp.philosophyaquatica.info
-      hostname: hpworker02.nerdland.local
+      # hostname: hpworker02.nerdland.local
       tls: false
     mariadb:
       enabled: false
     service:
-      type: ClusterIP
+      type: LoadBalancer
     wordpressSkipInstall: false
