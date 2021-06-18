@@ -6,9 +6,9 @@ metadata:
   namespace: apps
 spec:
   # serviceAccountName: wordpress-sync
-  dependsOn:
-    - name: ingress-nginx
-      namespace: ingress-nginx
+  # dependsOn:
+  #   - name: ingress-nginx
+  #     namespace: ingress-nginx
   chart:
     spec:
       chart: wordpress
