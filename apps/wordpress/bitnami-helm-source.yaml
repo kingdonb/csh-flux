@@ -3,7 +3,7 @@ apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository
 metadata:
   name: bitnami
-  namespace: wordpress
+  namespace: apps
 spec:
   interval: 1h5m0s
   timeout: 2m30s
