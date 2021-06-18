@@ -4,6 +4,7 @@ metadata:
   name: tenants
   namespace: flux-system
 spec:
+  suspend: true
   dependsOn:
     - name: kured
   interval: 5m

@@ -4,6 +4,7 @@ metadata:
   name: metallb
   namespace: flux-system
 spec:
+  suspend: true
   dependsOn:
     - name: flux-system
   interval: 10m
@@ -26,6 +27,7 @@ metadata:
   name: kured
   namespace: flux-system
 spec:
+  suspend: true
   dependsOn:
     - name: metallb
   interval: 5m
