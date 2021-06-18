@@ -3,6 +3,6 @@ kind: Kustomization
 resources:
 - https://github.com/weaveworks/kured/releases/download/1.7.0/kured-1.7.0-dockerhub.yaml
 images:
-- name: docker.io/weaveworks/kured
+- name: quay.io/weaveworks/kured
   newName: paulfantom/kured
   newTag: 1.7.0
