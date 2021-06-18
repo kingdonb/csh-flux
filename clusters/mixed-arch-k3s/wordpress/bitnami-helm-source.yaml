@@ -6,5 +6,6 @@ metadata:
   namespace: wordpress
 spec:
   interval: 5m0s
+  timeout: 2m30s
   url: https://charts.bitnami.com/bitnami
 
