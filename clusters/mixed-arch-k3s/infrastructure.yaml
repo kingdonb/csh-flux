@@ -1,0 +1,36 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  name: metallb
+  namespace: flux-system
+spec:
+  interval: 10m
+  timeout: 2m
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./infrastructure/metallb
+  prune: true
+  validation: client
+#  healthChecks:
+#    - apiVersion: apps/v1
+#      kind: Deployment
+#      name: kyverno
+#      namespace: kyverno
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  name: kured
+  namespace: flux-system
+spec:
+#  dependsOn:
+#    - name: kyverno
+  interval: 5m
+  timeout: 2m
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./infrastructure/kured
+  prune: true
+  validation: client
