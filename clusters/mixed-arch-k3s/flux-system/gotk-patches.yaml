@@ -70,7 +70,7 @@ metadata:
   name: image-automation-controller
   namespace: flux-system
 spec:
-  replicas: 0
+  replicas: 1
   template:
     spec:
       nodeSelector:
@@ -82,7 +82,7 @@ metadata:
   name: image-reflector-controller
   namespace: flux-system
 spec:
-  replicas: 0
+  replicas: 1
   template:
     spec:
       nodeSelector:
