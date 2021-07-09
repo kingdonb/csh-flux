@@ -1,0 +1,11 @@
+apiVersion: kubedb.com/v1alpha2
+kind: MariaDB
+metadata:
+  name: etcd-mixed-arch-k3s
+  namespace: kubedb-system
+spec:
+  storage:
+    resources:
+      requests:
+        storage: 10Gi
+  terminationPolicy: WipeOut
