@@ -3,5 +3,6 @@ kind: Kustomization
 namespace: kubedb-system
 resources:
   - ../base/local-path-mariadb/etcd-mixed-arch-k3s-mariadb.yaml
+  - etcd-mixed-arch-k3s-lb.yaml
 patchesStrategicMerge:
   - etcd-mariadb-k3s-patch.yaml

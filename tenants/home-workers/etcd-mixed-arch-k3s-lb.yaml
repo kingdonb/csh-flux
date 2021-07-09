@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: etcd-mixed-arch-k3s-lb
+  namespace: kubedb-system
+spec:
+  type: LoadBalancer
+  ports:
+  - name: primary
+    port: 3306
+    protocol: TCP
+    targetPort: db
+  selector:
+    app.kubernetes.io/instance: etcd-mixed-arch-k3s
