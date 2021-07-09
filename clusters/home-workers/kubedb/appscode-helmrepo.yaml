@@ -1,0 +1,10 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  name: appscode
+  namespace: kubedb-system
+spec:
+  interval: 20m0s
+  url: https://charts.appscode.com/stable/
+
