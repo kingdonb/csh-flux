@@ -17,6 +17,7 @@ spec:
   valuesFrom:
   - kind: Secret
     name: kubedb-community-license
-    valuesKey: values.yaml
+    valuesKey: license
+    targetPath: global.license
     optional: false
 
