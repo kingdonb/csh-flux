@@ -21,4 +21,4 @@ subsets:
   - ip: 10.17.12.21
   ports:
   - port: 80
-    name: urbit-http
+    name: k3s-ingress
