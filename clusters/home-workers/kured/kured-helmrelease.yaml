@@ -19,4 +19,4 @@ spec:
     metrics:
       create: true
     configuration:
-      period: 3m0s
+      period: 0m30s
