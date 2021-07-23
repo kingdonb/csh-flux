@@ -18,3 +18,5 @@ spec:
   values:
     metrics:
       create: true
+    configuration:
+      period: 3m0s
