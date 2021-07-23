@@ -19,4 +19,5 @@ spec:
     metrics:
       create: true
     configuration:
-      period: 0m30s
+      period: 0h0m30s
+      rebootCommand: /bin/systemctl reboot
