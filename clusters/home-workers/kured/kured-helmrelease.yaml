@@ -18,6 +18,7 @@ spec:
   values:
     metrics:
       create: true
+    updateStrategy: rollingUpdate
     configuration:
       period: 1h0m0s
 #      rebootCommand: /bin/systemctl reboot
