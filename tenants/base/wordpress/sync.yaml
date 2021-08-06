@@ -22,4 +22,3 @@ spec:
     name: wordpress
   prune: true
   validation: client
-  path: ~
