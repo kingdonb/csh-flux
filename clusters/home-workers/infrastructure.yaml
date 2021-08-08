@@ -22,8 +22,8 @@ spec:
       namespace: cert-manager
     - apiVersion: apps/v1
       kind: Deployment
-      name: cert-manager
-      namespace: cert-manager-webhook
+      name: cert-manager-webhook
+      namespace: cert-manager
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
