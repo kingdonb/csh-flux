@@ -1,20 +1,21 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: gitno-hephy-pro
+  name: jenkins-hephy-pro
   namespace: ingress-nginx
 spec:
   ports:
-    - name: moo-ingress
+    - name: moo-ingress-http
       protocol: TCP
-      port: 443
-      targetPort: 443
+      port: 80
+      targetPort: 80
       nodePort: 0
 ---
+# See gitno-hephy-pro which has the same backend
 kind: Endpoints
 apiVersion: v1
 metadata:
-  name: gitno-hephy-pro
+  name: jenkins-hephy-pro
   namespace: ingress-nginx
 subsets:
 - addresses:
