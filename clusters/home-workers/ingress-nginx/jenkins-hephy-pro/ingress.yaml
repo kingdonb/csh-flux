@@ -4,7 +4,7 @@ metadata:
   name: jenkins-hephy-pro
   namespace: ingress-nginx
   annotations:
-    nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
     nginx.ingress.kubernetes.io/ssl-passthrough: "true"
 spec:
   rules:
@@ -17,4 +17,4 @@ spec:
           service:
             name: jenkins-hephy-pro
             port:
-              number: 80
+              number: 443
