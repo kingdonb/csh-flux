@@ -17,4 +17,4 @@ spec:
           service:
             name: socryx-topled
             port:
-              number: 443
+              number: 80
