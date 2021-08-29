@@ -4,5 +4,8 @@ namespace: kubedb-system
 resources:
   - ../base/local-path-mariadb/etcd-mixed-arch-k3s-mariadb.yaml
   - etcd-mixed-arch-k3s-lb.yaml
+  - ../base/local-path-mariadb/keycloak-hephy-pro-mariadb.yaml
+  - db-keycloak-hephy-pro-lb.yaml
 patchesStrategicMerge:
   - etcd-mariadb-k3s-patch.yaml
+  - keycloak-hephy-pro-patch.yaml
