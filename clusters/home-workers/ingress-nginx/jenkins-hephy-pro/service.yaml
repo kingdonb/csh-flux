@@ -1,27 +1,27 @@
-kind: Service
-apiVersion: v1
-metadata:
-  name: jenkins-hephy-pro
-  namespace: ingress-nginx
-spec:
-  ports:
-    - name: moo-ingress
-      protocol: TCP
-      port: 443
-      targetPort: 443
-      nodePort: 0
----
-# See gitno-hephy-pro which has the same backend
-kind: Endpoints
-apiVersion: v1
-metadata:
-  name: jenkins-hephy-pro
-  namespace: ingress-nginx
-subsets:
-- addresses:
-  - ip: 10.17.12.201
-  ports:
-  - port: 80
-    name: moo-ingress-http
-  - port: 443
-    name: moo-ingress
+#kind: Service
+#apiVersion: v1
+#metadata:
+#  name: jenkins-hephy-pro
+#  namespace: ingress-nginx
+#spec:
+#  ports:
+#    - name: moo-ingress
+#      protocol: TCP
+#      port: 443
+#      targetPort: 443
+#      nodePort: 0
+#---
+## See gitno-hephy-pro which has the same backend
+#kind: Endpoints
+#apiVersion: v1
+#metadata:
+#  name: jenkins-hephy-pro
+#  namespace: ingress-nginx
+#subsets:
+#- addresses:
+#  - ip: 10.17.12.201
+#  ports:
+#  - port: 80
+#    name: moo-ingress-http
+#  - port: 443
+#    name: moo-ingress
