@@ -1,0 +1,26 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: vpn-admin-hephy-pro
+  namespace: ingress-nginx
+spec:
+  ports:
+    - name: moo-ingress-http
+      protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 0
+---
+kind: Endpoints
+apiVersion: v1
+metadata:
+  name: vpn-admin-hephy-pro
+  namespace: ingress-nginx
+subsets:
+- addresses:
+  - ip: 10.17.12.202
+  ports:
+  - port: 80
+    name: moo-ingress-http
+  - port: 443
+    name: moo-ingress
