@@ -2,7 +2,7 @@ apiVersion: kubedb.com/v1alpha2
 kind: Postgres
 metadata:
   name: deis-hephy-workflow
-  namespace: kubedb-system
+  namespace: demo
 spec:
   version: "13.2-debian"
   storageType: Durable
