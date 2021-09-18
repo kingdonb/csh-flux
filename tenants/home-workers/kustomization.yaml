@@ -6,6 +6,9 @@ resources:
   - etcd-mixed-arch-k3s-lb.yaml
   - ../base/local-path-mariadb/keycloak-hephy-pro-mariadb.yaml
   - db-keycloak-hephy-pro-lb.yaml
+  - ../base/local-path-postgres/deis-hephy-workflow-postgres.yaml
+  - db-deis-hephy-workflow-lb.yaml
 patchesStrategicMerge:
   - etcd-mariadb-k3s-patch.yaml
   - keycloak-hephy-pro-patch.yaml
+  - deis-hephy-workflow-patch.yaml

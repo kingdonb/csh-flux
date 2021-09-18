@@ -1,0 +1,11 @@
+apiVersion: kubedb.com/v1alpha2
+kind: Postgres
+metadata:
+  name: deis-hephy-workflow
+  namespace: kubedb-system
+spec:
+  storage:
+    resources:
+      requests:
+        storage: 10Gi
+  terminationPolicy: DoNotTerminate
