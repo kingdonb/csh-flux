@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: simplest-commitbee-deis-hephy-pro
+  namespace: ingress-nginx
+  annotations:
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/ssl-passthrough: "false"
+spec:
+  rules:
+  - host: simplest-commitbee.deis.hephy.pro
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: simplest-commitbee-deis-hephy-pro
+            port:
+              number: 80
