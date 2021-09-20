@@ -5,10 +5,10 @@ metadata:
   namespace: ingress-nginx
 spec:
   ports:
-    - name: amb-ingress
+    - name: amb-ingress-http
       protocol: TCP
-      port: 443
-      targetPort: 443
+      port: 80
+      targetPort: 80
       nodePort: 0
 ---
 kind: Endpoints
