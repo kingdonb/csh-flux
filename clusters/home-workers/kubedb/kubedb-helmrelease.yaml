@@ -8,7 +8,7 @@ spec:
   chart:
     spec:
       chart: ./kubedb-operator
-      version: v2021.09.09
+      version: v2021.06.23
       sourceRef:
         kind: GitRepository
         name: kubedb-chart
