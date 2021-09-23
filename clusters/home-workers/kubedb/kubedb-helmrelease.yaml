@@ -7,7 +7,7 @@ metadata:
 spec:
   chart:
     spec:
-      chart: kubedb
+      chart: kubedb-enterprise
       version: v2021.09.09
       sourceRef:
         kind: HelmRepository
@@ -15,6 +15,8 @@ spec:
   install: {}
   interval: 1m0s
   values:
+    kubedb-community:
+      enabled: false
     kubedb-enterprise:
       enabled: true
     kubedb-autoscaler:
