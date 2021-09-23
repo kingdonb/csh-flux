@@ -6,3 +6,4 @@ resources:
 - kubedb-helmrelease.yaml
 - kubedb-system-namespace.yaml
 - tenant-kustomization.yaml
+- kubedb-chart-gitrepo.yaml
