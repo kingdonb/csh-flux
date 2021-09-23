@@ -15,8 +15,8 @@ spec:
   install: {}
   interval: 1m0s
   values:
-    kubedb-community:
-      enabled: false
+    # kubedb-community:
+    #   enabled: false
     kubedb-enterprise:
       enabled: true
     kubedb-autoscaler:
