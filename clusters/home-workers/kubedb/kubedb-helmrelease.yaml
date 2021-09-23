@@ -14,9 +14,14 @@ spec:
         name: appscode
   install: {}
   interval: 1m0s
+  values:
+    kubedb-enterprise:
+      enabled: true
+    kubedb-autoscaler:
+      enabled: true
   valuesFrom:
   - kind: Secret
-    name: kubedb-community-license
+    name: kubedb-enterprise-license
     valuesKey: license
     targetPath: global.license
     optional: false
