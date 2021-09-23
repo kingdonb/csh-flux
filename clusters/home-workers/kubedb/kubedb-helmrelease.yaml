@@ -7,11 +7,11 @@ metadata:
 spec:
   chart:
     spec:
-      chart: ./kubedb-operator
+      chart: kubedb
       version: v2021.06.23
       sourceRef:
-        kind: GitRepository
-        name: kubedb-chart
+        kind: HelmRepository
+        name: appscode
   install: {}
   interval: 1m0s
   values:
