@@ -5,7 +5,7 @@ metadata:
   namespace: ingress-nginx
   annotations:
     nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
-    nginx.ingress.kubernetes.io/ssl-passthrough: "false"
+    nginx.ingress.kubernetes.io/ssl-passthrough: "true"
 spec:
   rules:
   - host: socryx-topled.arvo.network
@@ -17,4 +17,4 @@ spec:
           service:
             name: socryx-topled
             port:
-              number: 80
+              number: 443
