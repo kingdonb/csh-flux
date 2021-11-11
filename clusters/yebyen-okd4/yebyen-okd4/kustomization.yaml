@@ -4,5 +4,5 @@ resources:
 - gitno-hephy-rocks-ingress.yaml
 - gotk-sync.yaml
 - webhook-receiver.yaml
-- csh-flux-secret.yaml
-- webhook-token-secret.yaml
+#- csh-flux-secret.yaml
+#- webhook-token-secret.yaml
