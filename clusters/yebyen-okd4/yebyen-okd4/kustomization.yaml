@@ -1,9 +1,9 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-#- flux-secret.yaml
-#- webhook-token-secret.yaml
-#- gitno-hephy-rocks-ingress.yaml
+- gitno-hephy-rocks-ingress.yaml
 - gotk-sync.yaml
+- webhook-receiver.yaml
+#- csh-flux-secret.yaml
+#- webhook-token-secret.yaml
 #- notification-controller.yaml
-#- webhook-receiver.yaml

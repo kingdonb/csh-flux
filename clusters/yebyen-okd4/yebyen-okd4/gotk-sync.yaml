@@ -5,7 +5,7 @@ metadata:
   namespace: yebyen-okd4
 spec:
   gitImplementation: go-git
-  interval: 1m0s
+  interval: 30m0s
   ref:
     branch: main
   secretRef:
@@ -19,7 +19,7 @@ metadata:
   name: csh-flux
   namespace: yebyen-okd4
 spec:
-  interval: 10m0s
+  interval: 1h0m0s
   timeout: 30s
   retryInterval: 2m0s
   path: ./clusters/yebyen-okd4

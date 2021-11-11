@@ -1,16 +1,17 @@
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: webhook-receiver
-  namespace: yebyen-okd4
-  annotations:
-    kubernetes.io/ingress.class: "nginx"
+  namespace: flux-system
 spec:
   rules:
   - host: gitno.hephy.rocks
     http:
       paths:
       - path: /
+        pathType: Prefix
         backend:
-          serviceName: notification-webhook
-          servicePort: 9292
+          service:
+            name: webhook-receiver
+            port:
+              number: 80

@@ -1,7 +1,7 @@
 apiVersion: notification.toolkit.fluxcd.io/v1beta1
 kind: Receiver
 metadata:
-  name: flux-csh
+  name: csh-flux
   namespace: yebyen-okd4
 spec:
   type: github
@@ -13,9 +13,9 @@ spec:
   resources:
     - kind: GitRepository
       name: flux-csh
-    - kind: GitRepository
-      name: any-old-app-main
-    - kind: GitRepository
-      name: any-old-app-prod
-    - kind: GitRepository
-      name: any-old-app-deploy
+#    - kind: GitRepository
+#      name: any-old-app-main
+#    - kind: GitRepository
+#      name: any-old-app-prod
+#    - kind: GitRepository
+#      name: any-old-app-deploy
