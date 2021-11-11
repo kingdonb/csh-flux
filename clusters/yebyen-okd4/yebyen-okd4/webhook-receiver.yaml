@@ -12,7 +12,7 @@ spec:
     name: webhook-token
   resources:
     - kind: GitRepository
-      name: flux-csh
+      name: csh-flux
 #    - kind: GitRepository
 #      name: any-old-app-main
 #    - kind: GitRepository
