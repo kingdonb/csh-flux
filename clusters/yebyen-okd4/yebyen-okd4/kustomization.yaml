@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
 #- flux-secret.yaml
 #- webhook-token-secret.yaml
-- gitno-hephy-rocks-ingress.yaml
+#- gitno-hephy-rocks-ingress.yaml
 - gotk-sync.yaml
-- notification-controller.yaml
-- webhook-receiver.yaml
+#- notification-controller.yaml
+#- webhook-receiver.yaml
