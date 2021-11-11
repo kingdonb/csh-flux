@@ -28,8 +28,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: csh-flux
-#  validation: client
-#  decryption:
-#    provider: sops
-#    secretRef:
-#      name: sops-gpg
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-gpg
