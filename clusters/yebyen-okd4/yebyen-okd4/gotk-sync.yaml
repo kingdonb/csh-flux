@@ -27,7 +27,7 @@ spec:
   wait: false
   sourceRef:
     kind: GitRepository
-    name: flux-csh
+    name: csh-flux
 #  validation: client
 #  decryption:
 #    provider: sops
