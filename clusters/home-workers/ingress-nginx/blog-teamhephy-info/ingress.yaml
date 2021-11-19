@@ -7,7 +7,6 @@ metadata:
     nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
     nginx.ingress.kubernetes.io/ssl-passthrough: "false"
     cert-manager.io/cluster-issuer: production-letsencrypt
-    kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
   - host: blog.teamhephy.info
@@ -20,3 +19,7 @@ spec:
             name: blog-teamhephy-info
             port:
               number: 80
+  tls:
+  - hosts:
+    - blog.teamhephy.info
+    secretName: blog.teamhephy.info-tls
