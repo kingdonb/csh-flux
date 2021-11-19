@@ -5,13 +5,12 @@ metadata:
   namespace: ingress-nginx
 spec:
   ports:
-    - name: traef-ingress
+    - name: traef-ingress-http
       protocol: TCP
-      port: 443
-      targetPort: 443
+      port: 80
+      targetPort: 80
       nodePort: 0
 ---
-# See gitno-hephy-pro which has the same backend
 kind: Endpoints
 apiVersion: v1
 metadata:
