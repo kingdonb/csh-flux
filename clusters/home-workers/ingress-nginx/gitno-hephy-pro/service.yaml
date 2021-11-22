@@ -5,10 +5,10 @@ metadata:
   namespace: ingress-nginx
 spec:
   ports:
-    - name: moo-ingress
+    - name: traf-ingress-http
       protocol: TCP
-      port: 443
-      targetPort: 443
+      port: 80
+      targetPort: 80
       nodePort: 0
 ---
 kind: Endpoints
@@ -18,9 +18,9 @@ metadata:
   namespace: ingress-nginx
 subsets:
 - addresses:
-  - ip: 10.17.12.202
+  - ip: 10.17.12.207
   ports:
   - port: 80
-    name: moo-ingress-http
+    name: traf-ingress-http
   - port: 443
-    name: moo-ingress
+    name: traf-ingress
