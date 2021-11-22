@@ -6,6 +6,7 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
     nginx.ingress.kubernetes.io/ssl-passthrough: "false"
+    cert-manager.io/cluster-issuer: production-letsencrypt
 spec:
   rules:
   - host: gitno.hephy.pro
@@ -18,3 +19,7 @@ spec:
             name: gitno-hephy-pro
             port:
               number: 80
+  tls:
+  - hosts:
+    - gitno.hephy.pro
+    secretName: gitno.hephy.pro-tls
