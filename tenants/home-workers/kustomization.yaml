@@ -6,6 +6,8 @@ resources:
   - etcd-mixed-arch-k3s-lb.yaml
   - ../base/local-path-mariadb/keycloak-hephy-pro-mariadb.yaml
   - db-keycloak-hephy-pro-lb.yaml
+  - ../base/local-path-postgres/kuby-test-production-postgres.yaml
+  - db-kuby-test-production-lb.yaml
   - demo.yaml
   - ../base/local-path-postgres/deis-hephy-workflow-postgres.yaml
   - db-deis-hephy-workflow-lb.yaml

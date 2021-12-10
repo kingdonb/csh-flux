@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: db-kuby-test-production-lb.yaml
+  namespace: kubedb-system
+spec:
+  type: LoadBalancer
+  ports:
+  - name: primary
+    port: 3306
+    protocol: TCP
+    targetPort: db
+  selector:
+    app.kubernetes.io/instance: kuby-test-production
