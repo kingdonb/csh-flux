@@ -15,7 +15,7 @@ spec:
         namespace: flux-system
   values:
     tcp:
-      "2222": "deis/deis-builder:2222"
+    # "2222": "deis/deis-builder:2222"
     controller:
       hostNetwork: false
       useHostPort: false
