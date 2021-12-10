@@ -8,7 +8,7 @@ spec:
   loadBalancerIP: 10.17.12.226
   ports:
   - name: primary
-    port: 3306
+    port: 5432
     protocol: TCP
     targetPort: db
   selector:
