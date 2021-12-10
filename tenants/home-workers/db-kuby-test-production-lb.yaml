@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: db-kuby-test-production-lb.yaml
+  name: db-kuby-test-production-lb
   namespace: kubedb-system
 spec:
   type: LoadBalancer
