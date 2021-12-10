@@ -1,0 +1,24 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: podinfo-staging-hephy-pro
+  namespace: ingress-nginx
+spec:
+  ports:
+    - name: traefik-proxy
+      protocol: TCP
+      port: 443
+      targetPort: 443
+      nodePort: 0
+---
+kind: Endpoints
+apiVersion: v1
+metadata:
+  name: podinfo-staging-hephy-pro
+  namespace: ingress-nginx
+subsets:
+- addresses:
+  - ip: 10.17.12.207
+  ports:
+  - port: 443
+    name: traefik-proxy
