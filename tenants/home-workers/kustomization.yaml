@@ -8,6 +8,8 @@ resources:
   - db-keycloak-hephy-pro-lb.yaml
   - ../base/local-path-postgres/kuby-test-production-postgres.yaml
   - db-kuby-test-production-lb.yaml
+  - ../base/local-path-postgres/planet-store-production-postgres.yaml
+  - db-planet-store-production-lb.yaml
   - demo.yaml
   - ../base/local-path-postgres/deis-hephy-workflow-postgres.yaml
   - db-deis-hephy-workflow-lb.yaml
