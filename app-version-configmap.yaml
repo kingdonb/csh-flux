@@ -1,6 +1,6 @@
 apiVersion: v1
 data:
-  GIT_SHA: d5d99b29
+  GIT_SHA: e4a9baae
 kind: ConfigMap
 metadata:
   creationTimestamp: null
