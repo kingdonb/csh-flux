@@ -1,0 +1,38 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: traefik
+spec:
+  template:
+    spec:
+      containers:
+        - name: traefik
+          args:
+            - "--entryPoints.web.address=:8000/tcp"
+            - "--entryPoints.websecure.address=:8443/tcp"
+            - "--entryPoints.traefik.address=:9000/tcp"
+            - "--api=true"
+            - "--api.dashboard=true"
+            - "--ping=true"
+            - "--providers.kubernetescrd"
+            - "--providers.kubernetescrd.allowCrossNamespace=true" 
+            - "--providers.kubernetesingress=true"
+            - "--providers.kubernetesingress.allowEmptyServices=true"
+            - "--providers.kubernetesingress.ingressclass=traefik"
+            - "--certificatesresolvers.myresolver.acme.storage=/data/acme.json"
+            - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
+            - "--certificatesresolvers.myresolver.acme.email=kingdon+acme@weave.works"
+            - "--certificatesresolvers.myresolver.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory"
+            - "--certificatesresolvers.prodresolver.acme.storage=/data/acme-prod.json"
+            - "--certificatesresolvers.prodresolver.acme.tlschallenge=true"
+            - "--certificatesresolvers.prodresolver.acme.email=kingdon+acme@weave.works"
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: traefik
+spec:
+  loadBalancerIP: 10.17.12.207 # traefik-proxy.turkey.local
+  type: LoadBalancer
