@@ -51,6 +51,7 @@ spec:
     ingress:
       certManager: false
       enabled: false
+      hostname: hpworker-nginx.turkey.local
       # hostname: wp.philosophyaquatica.info
       # hostname: hpworker02.nerdland.local
       tls: false
