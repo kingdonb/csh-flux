@@ -1,26 +1,26 @@
-kind: Service
-apiVersion: v1
-metadata:
-  name: simplest-commitbee-deis-hephy-pro
-  namespace: ingress-nginx
-spec:
-  ports:
-    - name: amb-ingress
-      protocol: TCP
-      port: 443
-      targetPort: 443
-      nodePort: 0
----
-kind: Endpoints
-apiVersion: v1
-metadata:
-  name: simplest-commitbee-deis-hephy-pro
-  namespace: ingress-nginx
-subsets:
-- addresses:
-  - ip: 10.17.12.204
-  ports:
-  - port: 80
-    name: amb-ingress-http
-  - port: 443
-    name: amb-ingress
+# kind: Service
+# apiVersion: v1
+# metadata:
+#   name: simplest-commitbee-deis-hephy-pro
+#   namespace: ingress-nginx
+# spec:
+#   ports:
+#     - name: amb-ingress
+#       protocol: TCP
+#       port: 443
+#       targetPort: 443
+#       nodePort: 0
+# ---
+# kind: Endpoints
+# apiVersion: v1
+# metadata:
+#   name: simplest-commitbee-deis-hephy-pro
+#   namespace: ingress-nginx
+# subsets:
+# - addresses:
+#   - ip: 10.17.12.204
+#   ports:
+#   - port: 80
+#     name: amb-ingress-http
+#   - port: 443
+#     name: amb-ingress
