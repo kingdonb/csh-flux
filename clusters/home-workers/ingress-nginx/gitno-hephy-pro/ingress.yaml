@@ -1,25 +1,25 @@
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: gitno-hephy-pro
-  namespace: ingress-nginx
-  annotations:
-    nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
-    nginx.ingress.kubernetes.io/ssl-passthrough: "false"
-    cert-manager.io/cluster-issuer: production-letsencrypt
-spec:
-  rules:
-  - host: gitno.hephy.pro
-    http:
-      paths:
-      - pathType: Prefix
-        path: /
-        backend:
-          service:
-            name: gitno-hephy-pro
-            port:
-              number: 80
-  tls:
-  - hosts:
-    - gitno.hephy.pro
-    secretName: gitno.hephy.pro-tls
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: gitno-hephy-pro
+#   namespace: ingress-nginx
+#   annotations:
+#     nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
+#     nginx.ingress.kubernetes.io/ssl-passthrough: "false"
+#     cert-manager.io/cluster-issuer: production-letsencrypt
+# spec:
+#   rules:
+#   - host: gitno.hephy.pro
+#     http:
+#       paths:
+#       - pathType: Prefix
+#         path: /
+#         backend:
+#           service:
+#             name: gitno-hephy-pro
+#             port:
+#               number: 80
+#   tls:
+#   - hosts:
+#     - gitno.hephy.pro
+#     secretName: gitno.hephy.pro-tls

@@ -1,25 +1,25 @@
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: blog-teamhephy-info
-  namespace: ingress-nginx
-  annotations:
-    nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
-    nginx.ingress.kubernetes.io/ssl-passthrough: "false"
-    cert-manager.io/cluster-issuer: production-letsencrypt
-spec:
-  rules:
-  - host: blog.teamhephy.info
-    http:
-      paths:
-      - pathType: Prefix
-        path: /
-        backend:
-          service:
-            name: blog-teamhephy-info
-            port:
-              number: 80
-  tls:
-  - hosts:
-    - blog.teamhephy.info
-    secretName: blog.teamhephy.info-tls
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: blog-teamhephy-info
+#   namespace: ingress-nginx
+#   annotations:
+#     nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
+#     nginx.ingress.kubernetes.io/ssl-passthrough: "false"
+#     cert-manager.io/cluster-issuer: production-letsencrypt
+# spec:
+#   rules:
+#   - host: blog.teamhephy.info
+#     http:
+#       paths:
+#       - pathType: Prefix
+#         path: /
+#         backend:
+#           service:
+#             name: blog-teamhephy-info
+#             port:
+#               number: 80
+#   tls:
+#   - hosts:
+#     - blog.teamhephy.info
+#     secretName: blog.teamhephy.info-tls

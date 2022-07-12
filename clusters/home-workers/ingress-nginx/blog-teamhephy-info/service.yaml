@@ -1,26 +1,26 @@
-kind: Service
-apiVersion: v1
-metadata:
-  name: blog-teamhephy-info
-  namespace: ingress-nginx
-spec:
-  ports:
-    - name: traef-ingress-http
-      protocol: TCP
-      port: 80
-      targetPort: 80
-      nodePort: 0
----
-kind: Endpoints
-apiVersion: v1
-metadata:
-  name: blog-teamhephy-info
-  namespace: ingress-nginx
-subsets:
-- addresses:
-  - ip: 10.17.12.207
-  ports:
-  - port: 80
-    name: traef-ingress-http
-  - port: 443
-    name: traef-ingress
+# kind: Service
+# apiVersion: v1
+# metadata:
+#   name: blog-teamhephy-info
+#   namespace: ingress-nginx
+# spec:
+#   ports:
+#     - name: traef-ingress-http
+#       protocol: TCP
+#       port: 80
+#       targetPort: 80
+#       nodePort: 0
+# ---
+# kind: Endpoints
+# apiVersion: v1
+# metadata:
+#   name: blog-teamhephy-info
+#   namespace: ingress-nginx
+# subsets:
+# - addresses:
+#   - ip: 10.17.12.207
+#   ports:
+#   - port: 80
+#     name: traef-ingress-http
+#   - port: 443
+#     name: traef-ingress
