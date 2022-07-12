@@ -1,0 +1,10 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  name: bitnami-old
+  namespace: wordpress
+spec:
+  interval: 15h0m0s
+  url: https://raw.githubusercontent.com/bitnami/charts/pre-2022/bitnami
+
