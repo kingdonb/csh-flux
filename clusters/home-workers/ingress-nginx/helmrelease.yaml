@@ -17,6 +17,13 @@ spec:
     tcp:
     # "2222": "deis/deis-builder:2222"
     controller:
+      metrics:
+        serviceMonitor:
+          enabled: "true"
+          namespace: monitoring
+          namespaceSelector: ingress-nginx
+          additionalLabels:
+            release: prometheus-stack
       hostNetwork: false
       useHostPort: false
       extraArgs:

@@ -29,4 +29,10 @@ spec:
       service:
         loadBalancerIP: 10.17.12.201
       metrics:
-        enabled: true
+        enabled: "true"
+        serviceMonitor:
+          enabled: "true"
+          namespace: monitoring
+          namespaceSelector: ingress-nginx
+          additionalLabels:
+            release: prometheus-stack
