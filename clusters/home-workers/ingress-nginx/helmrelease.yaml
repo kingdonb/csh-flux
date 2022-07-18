@@ -18,6 +18,7 @@ spec:
     # "2222": "deis/deis-builder:2222"
     controller:
       metrics:
+        enabled: "true"
         serviceMonitor:
           enabled: "true"
           namespace: monitoring
