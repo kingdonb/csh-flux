@@ -35,6 +35,8 @@ spec:
         serviceMonitor:
           enabled: "true"
           namespace: monitoring
-          namespaceSelector: ingress-nginx
+          namespaceSelector:
+            matchNames:
+              - ingress-nginx
           additionalLabels:
             release: prometheus-stack
