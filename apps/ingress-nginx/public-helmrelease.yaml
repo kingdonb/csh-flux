@@ -39,4 +39,4 @@ spec:
             matchNames:
               - ingress-nginx
           additionalLabels:
-            release: prometheus-stack
+            release: kube-prometheus-stack
