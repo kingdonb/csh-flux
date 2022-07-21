@@ -8,7 +8,7 @@ spec:
   chart:
     spec:
       reconcileStrategy: Revision
-      chart: kured
+      chart: charts/kured
       sourceRef:
         kind: GitRepository
         name: kured-fork
