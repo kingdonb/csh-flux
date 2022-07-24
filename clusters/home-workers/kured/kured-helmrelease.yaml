@@ -5,6 +5,8 @@ metadata:
   name: kured
   namespace: flux-system
 spec:
+  upgrade:
+    force: true
   chart:
     spec:
       chart: kured
