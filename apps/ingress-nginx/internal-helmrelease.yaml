@@ -29,4 +29,12 @@ spec:
       service:
         loadBalancerIP: 10.17.12.201
       metrics:
-        enabled: true
+        enabled: "true"
+        serviceMonitor:
+          enabled: "true"
+          namespace: monitoring
+          namespaceSelector:
+            matchNames:
+              - ingress-nginx
+          additionalLabels:
+            release: kube-prometheus-stack
