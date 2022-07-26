@@ -1,0 +1,16 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: loki-stack
+  namespace: monitoring
+spec:
+  interval: 10m0s
+  timeout: 2m0s
+  path: ./manifests/monitoring/loki-stack
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: monitoring
+  dependsOn:
+  - name: kube-prometheus-stack
