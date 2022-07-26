@@ -13,4 +13,4 @@ spec:
     kind: GitRepository
     name: monitoring
   dependsOn:
-  - name: kube-prometheus-stack
+  - name: monitoring-stack
