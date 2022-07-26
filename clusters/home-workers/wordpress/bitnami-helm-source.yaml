@@ -5,6 +5,6 @@ metadata:
   name: bitnami
   namespace: wordpress
 spec:
-  interval: 1h0m0s
+  interval: 24h0m0s
   url: https://charts.bitnami.com/bitnami
 
