@@ -5,6 +5,6 @@ metadata:
   name: appscode
   namespace: kubedb-system
 spec:
-  interval: 20m0s
+  interval: 1h20m0s
   url: https://charts.appscode.com/stable/
 
