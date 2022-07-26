@@ -3,4 +3,5 @@ kind: Kustomization
 resources:
 - flux-kustomization-config.yaml
 - flux-kustomization.yaml
+- loki-flux-kustomization.yaml
 - source.yaml
