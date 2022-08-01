@@ -7,11 +7,10 @@ metadata:
 spec:
   chart:
     spec:
-      reconcileStrategy: Revision
-      chart: charts/kured
+      chart: kured
       sourceRef:
-        kind: GitRepository
-        name: kured-fork
+        kind: HelmRepository
+        name: kured
       version: ^3.0.0
   interval: 30m0s
   releaseName: kured

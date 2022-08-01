@@ -3,5 +3,4 @@ kind: Kustomization
 resources:
 - kured-helmrelease.yaml
 - kured-helmrepo.yaml
-- kured-gitrepo.yaml
 # - https://github.com/weaveworks/kured/releases/download/1.7.0/kured-1.7.0-dockerhub.yaml
