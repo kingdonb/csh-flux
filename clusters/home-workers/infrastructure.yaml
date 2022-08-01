@@ -1,6 +1,6 @@
 #
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
-klind: Kustomization
+kind: Kustomization
 metadata:
   name: cert-manager
   namespace: flux-system
