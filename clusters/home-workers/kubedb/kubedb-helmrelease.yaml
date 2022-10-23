@@ -5,6 +5,7 @@ metadata:
   name: kubedb
   namespace: kubedb-system
 spec:
+  suspend: true # do not install until license is updated
   chart:
     spec:
       chart: kubedb
