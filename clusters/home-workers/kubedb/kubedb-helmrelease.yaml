@@ -8,7 +8,7 @@ spec:
   chart:
     spec:
       chart: kubedb
-      version: v2022.10.18
+      version: v2021.06.23
       sourceRef:
         kind: HelmRepository
         name: appscode
