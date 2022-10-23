@@ -5,6 +5,7 @@ metadata:
   namespace: demo
 spec:
   type: LoadBalancer
+  loadBalancerIP: 10.17.12.227
   ports:
   - name: primary
     port: 5432
