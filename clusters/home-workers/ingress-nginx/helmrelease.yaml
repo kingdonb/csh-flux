@@ -34,7 +34,7 @@ spec:
       kind: Deployment
       service:
         type: LoadBalancer
-        loadBalancerIP: 10.17.12.204
+        loadBalancerIP: 10.17.12.206
         nodePorts:
           http: 32082
           https: 32443
