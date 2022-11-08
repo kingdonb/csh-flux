@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       chart: kubedb
-      version: v2022.10.18
+      version: v2021.12.21
       sourceRef:
         kind: HelmRepository
         name: appscode
@@ -22,6 +22,15 @@ spec:
       enabled: true
     kubedb-autoscaler:
       enabled: true
+    kubedb-provisioner:
+      enabled: true
+    kubedb-ops-manager:
+      enabled: true
+    kubedb-dashboard:
+      enabled: true
+    kubedb-schema-manager:
+      enabled: true
+
   valuesFrom:
   - kind: Secret
     name: kubedb-enterprise-license
