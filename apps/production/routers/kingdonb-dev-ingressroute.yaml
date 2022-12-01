@@ -1,0 +1,42 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: kingdonb-dev-insecure
+  namespace: traefik-production
+spec:
+  entryPoints:
+    - web
+  routes:
+  - match: Host(`kingdonb.dev`)
+    services:
+    - name: commitsto-alpha-x-commitsto-alpha-x-hephy-stg
+      namespace: vcluster-hephy-stg-turkey-local
+      port: 80
+  - match: Host(`kb.kingdonb.dev`)
+    services:
+    - name: commitsto-alpha-x-commitsto-alpha-x-hephy-stg
+      namespace: vcluster-hephy-stg-turkey-local
+      port: 80
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRouteTCP
+metadata:
+  name: kingdonb-dev
+  namespace: traefik-production
+spec:
+  entryPoints:
+    - websecure
+  routes:
+  - match: HostSNI(`kingdonb.dev`)
+    services:
+    - name: commitsto-alpha-x-commitsto-alpha-x-hephy-stg
+      namespace: vcluster-hephy-stg-turkey-local
+      port: 80
+  - match: HostSNI(`kb.kingdonb.dev`)
+    services:
+    - name: commitsto-alpha-x-commitsto-alpha-x-hephy-stg
+      namespace: vcluster-hephy-stg-turkey-local
+      port: 80
+  tls:
+    certResolver: myresolver
