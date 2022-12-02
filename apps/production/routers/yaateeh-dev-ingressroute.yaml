@@ -1,0 +1,34 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: yaateeh-dev-insecure
+  namespace: traefik-production
+spec:
+  entryPoints:
+    - web
+  routes:
+  - match: Host(`giovanni.yaateeh.dev`,`nwinter.yaateeh.dev`,`alys.yaateeh.dev`,`dan.yaateeh.dev`,`xenocid.yaateeh.dev`,`jordan.yaateeh.dev`,`alys.yaateeh.dev`,`dan.yaateeh.dev`,`xenocid.yaateeh.dev`,`jordan.yaateeh.dev`,`brian.yaateeh.dev`,`nick.yaateeh.dev`,`alex.yaateeh.dev`,`clarissa.yaateeh.dev`,`luke.yaateeh.dev`,`mike.yaateeh.dev`,`max.yaateeh.dev`,`jay.yaateeh.dev`,`sergii.yaateeh.dev`,`cole.yaateeh.dev`,`forrest.yaateeh.dev`,`chris.yaateeh.dev`,`echodaniel.yaateeh.dev`,`edyson.yaateeh.dev`,`clive.yaateeh.dev`,`byorgey.yaateeh.dev`,`kim.yaateeh.dev`,`kb.yaateeh.dev`,`kevin.yaateeh.dev`,`mbork.yaateeh.dev`,`shanaqui.yaateeh.dev`,`philip.yaateeh.dev`,`bee.yaateeh.dev`,`adam.yaateeh.dev`,`mary.yaateeh.dev`,`martin.yaateeh.dev`,`dreev.yaateeh.dev`,`aian.yaateeh.dev`,`yaateeh.dev`)
+    kind: Rule
+    services:
+    - name: commitsto-staging-x-commitsto-staging-x-hephy-stg
+      namespace: vcluster-hephy-stg-turkey-local
+      port: 80
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: yaateeh-dev
+  namespace: traefik-production
+spec:
+  entryPoints:
+    - websecure
+  routes:
+  - match: Host(`giovanni.yaateeh.dev`,`nwinter.yaateeh.dev`,`alys.yaateeh.dev`,`dan.yaateeh.dev`,`xenocid.yaateeh.dev`,`jordan.yaateeh.dev`,`alys.yaateeh.dev`,`dan.yaateeh.dev`,`xenocid.yaateeh.dev`,`jordan.yaateeh.dev`,`brian.yaateeh.dev`,`nick.yaateeh.dev`,`alex.yaateeh.dev`,`clarissa.yaateeh.dev`,`luke.yaateeh.dev`,`mike.yaateeh.dev`,`max.yaateeh.dev`,`jay.yaateeh.dev`,`sergii.yaateeh.dev`,`cole.yaateeh.dev`,`forrest.yaateeh.dev`,`chris.yaateeh.dev`,`echodaniel.yaateeh.dev`,`edyson.yaateeh.dev`,`clive.yaateeh.dev`,`byorgey.yaateeh.dev`,`kim.yaateeh.dev`,`kb.yaateeh.dev`,`kevin.yaateeh.dev`,`mbork.yaateeh.dev`,`shanaqui.yaateeh.dev`,`philip.yaateeh.dev`,`bee.yaateeh.dev`,`adam.yaateeh.dev`,`mary.yaateeh.dev`,`martin.yaateeh.dev`,`dreev.yaateeh.dev`,`aian.yaateeh.dev`,`yaateeh.dev`)
+    kind: Rule
+    services:
+    - name: commitsto-staging-x-commitsto-staging-x-hephy-stg
+      namespace: vcluster-hephy-stg-turkey-local
+      port: 80
+  tls:
+    certResolver: myresolver
