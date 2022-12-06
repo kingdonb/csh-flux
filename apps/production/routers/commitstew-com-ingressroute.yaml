@@ -1,0 +1,34 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: commitstew-com-insecure
+  namespace: traefik-production
+spec:
+  entryPoints:
+    - web
+  routes:
+  - match: Host(`giovanni.commitstew.com`,`nwinter.commitstew.com`,`alys.commitstew.com`,`dan.commitstew.com`,`xenocid.commitstew.com`,`jordan.commitstew.com`,`alys.commitstew.com`,`dan.commitstew.com`,`xenocid.commitstew.com`,`jordan.commitstew.com`,`brian.commitstew.com`,`nick.commitstew.com`,`alex.commitstew.com`,`clarissa.commitstew.com`,`luke.commitstew.com`,`mike.commitstew.com`,`max.commitstew.com`,`jay.commitstew.com`,`sergii.commitstew.com`,`cole.commitstew.com`,`forrest.commitstew.com`,`chris.commitstew.com`,`echodaniel.commitstew.com`,`edyson.commitstew.com`,`clive.commitstew.com`,`byorgey.commitstew.com`,`kim.commitstew.com`,`kb.commitstew.com`,`kevin.commitstew.com`,`mbork.commitstew.com`,`shanaqui.commitstew.com`,`philip.commitstew.com`,`bee.commitstew.com`,`adam.commitstew.com`,`mary.commitstew.com`,`martin.commitstew.com`,`dreev.commitstew.com`,`aian.commitstew.com`,`commitstew.com`)
+    kind: Rule
+    services:
+    - name: commitsto-staging-x-commitsto-staging-x-hephy-stg
+      namespace: vcluster-hephy-stg-turkey-local
+      port: 80
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: commitstew-com
+  namespace: traefik-production
+spec:
+  entryPoints:
+    - websecure
+  routes:
+  - match: Host(`giovanni.commitstew.com`,`nwinter.commitstew.com`,`alys.commitstew.com`,`dan.commitstew.com`,`xenocid.commitstew.com`,`jordan.commitstew.com`,`alys.commitstew.com`,`dan.commitstew.com`,`xenocid.commitstew.com`,`jordan.commitstew.com`,`brian.commitstew.com`,`nick.commitstew.com`,`alex.commitstew.com`,`clarissa.commitstew.com`,`luke.commitstew.com`,`mike.commitstew.com`,`max.commitstew.com`,`jay.commitstew.com`,`sergii.commitstew.com`,`cole.commitstew.com`,`forrest.commitstew.com`,`chris.commitstew.com`,`echodaniel.commitstew.com`,`edyson.commitstew.com`,`clive.commitstew.com`,`byorgey.commitstew.com`,`kim.commitstew.com`,`kb.commitstew.com`,`kevin.commitstew.com`,`mbork.commitstew.com`,`shanaqui.commitstew.com`,`philip.commitstew.com`,`bee.commitstew.com`,`adam.commitstew.com`,`mary.commitstew.com`,`martin.commitstew.com`,`dreev.commitstew.com`,`aian.commitstew.com`,`commitstew.com`)
+    kind: Rule
+    services:
+    - name: commitsto-staging-x-commitsto-staging-x-hephy-stg
+      namespace: vcluster-hephy-stg-turkey-local
+      port: 80
+  tls:
+    certResolver: myresolver
