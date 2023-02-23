@@ -1,5 +1,5 @@
 namespace: metallb-system
 
 resources:
-  - https://raw.githubusercontent.com/metallb/metallb/v0.13.7/config/manifests/metallb-native.yaml
+  - https://raw.githubusercontent.com/metallb/metallb/v0.13.9/config/manifests/metallb-native.yaml
   - resources.yaml
