@@ -14,12 +14,12 @@ patches:
         template:
           spec:
             containers:
-            - image: ghcr.io/fluxcd/helm-controller:rc-fed429bf
+            - image: ghcr.io/fluxcd/helm-controller:rc-0bfbc3ee
               name: manager
               args:
                 - --events-addr=http://notification-controller.flux-system.svc.cluster.local./
                 - --watch-all-namespaces=true
-                - --log-level=info
+                - --log-level=debug
                 - --log-encoding=json
                 - --enable-leader-election
                 - --feature-gates=DetectDrift=True
