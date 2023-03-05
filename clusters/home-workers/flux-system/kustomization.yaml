@@ -14,7 +14,7 @@ patches:
         template:
           spec:
             containers:
-            - image: ghcr.io/fluxcd/helm-controller:rc-0bfbc3ee
+            - image: ghcr.io/fluxcd/helm-controller:rc-78f3ffb8
               name: manager
               args:
                 - --events-addr=http://notification-controller.flux-system.svc.cluster.local./
