@@ -5,7 +5,7 @@ metadata:
   namespace: kubedb-system
 spec:
   type: LoadBalancer
-  # loadBalancerIP: 10.17.12.225
+  loadBalancerIP: 10.17.12.239
   ports:
   - name: primary
     port: 3306
