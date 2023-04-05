@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: db-temp-sto-stage-lb
+  namespace: kubedb-system
+spec:
+  type: LoadBalancer
+  # loadBalancerIP: 10.17.12.225
+  ports:
+  - name: primary
+    port: 3306
+    protocol: TCP
+    targetPort: db
+  selector:
+    app.kubernetes.io/instance: temp-sto-stage

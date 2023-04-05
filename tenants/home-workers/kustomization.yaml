@@ -6,6 +6,8 @@ resources:
   - etcd-mixed-arch-k3s-lb.yaml
   - ../base/local-path-mariadb/keycloak-hephy-pro-mariadb.yaml
   - db-keycloak-hephy-pro-lb.yaml
+  - ../base/local-path-mariadb/temp-sto-stage-mariadb.yaml
+  - db-temp-sto-stage-lb.yaml
   - ../base/local-path-postgres/kuby-test-production-postgres.yaml
   - db-kuby-test-production-lb.yaml
   - ../base/local-path-postgres/planet-store-production-postgres.yaml
@@ -16,4 +18,5 @@ resources:
 patchesStrategicMerge:
   - etcd-mariadb-k3s-patch.yaml
   - keycloak-hephy-pro-patch.yaml
+  - temp-sto-stage-patch.yaml
   - deis-hephy-workflow-patch.yaml
