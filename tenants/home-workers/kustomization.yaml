@@ -8,6 +8,8 @@ resources:
   - db-keycloak-hephy-pro-lb.yaml
   - ../base/local-path-mariadb/temp-sto-stage-mariadb.yaml
   - db-temp-sto-stage-lb.yaml
+  - ../base/local-path-postgres/temp-store-postgres.yaml
+  - db-temp-store-lb.yaml
   - ../base/local-path-postgres/kuby-test-production-postgres.yaml
   - db-kuby-test-production-lb.yaml
   - ../base/local-path-postgres/planet-store-production-postgres.yaml
@@ -20,3 +22,4 @@ patchesStrategicMerge:
   - keycloak-hephy-pro-patch.yaml
   - temp-sto-stage-patch.yaml
   - deis-hephy-workflow-patch.yaml
+  - temp-store-patch.yaml

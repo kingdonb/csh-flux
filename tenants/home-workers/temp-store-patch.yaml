@@ -1,0 +1,11 @@
+apiVersion: kubedb.com/v1alpha2
+kind: Postgres
+metadata:
+  name: temp-store
+  namespace: demo
+spec:
+  storage:
+    resources:
+      requests:
+        storage: 10Gi
+  terminationPolicy: DoNotTerminate
