@@ -1,15 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: db-temp-sto-stage-lb
-  namespace: kubedb-system
+  name: db-temp-store-lb
+  namespace: demo
 spec:
   type: LoadBalancer
-  loadBalancerIP: 10.17.12.239 # sto-stage-db.turkey.local
+  loadBalancerIP: 10.17.12.240 # store-db.turkey.local
   ports:
   - name: primary
-    port: 3306
+    port: 5432
     protocol: TCP
     targetPort: db
   selector:
-    app.kubernetes.io/instance: temp-sto-stage
+    app.kubernetes.io/instance: temp-store
