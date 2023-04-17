@@ -12,7 +12,7 @@ spec:
         kind: HelmRepository
         name: kured
       version: '>=3.0.0'
-  interval: 30m0s
+  interval: 3m0s
   releaseName: kured
   targetNamespace: kube-system
   values:
