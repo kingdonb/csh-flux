@@ -10,6 +10,8 @@ resources:
   - db-temp-sto-stage-lb.yaml
   - ../base/local-path-postgres/temp-store-postgres.yaml
   - db-temp-store-lb.yaml
+  - ../base/local-path-postgres/download-counts-postgres.yaml
+  - db-download-counts-lb.yaml
   - ../base/local-path-postgres/kuby-test-production-postgres.yaml
   - db-kuby-test-production-lb.yaml
   - ../base/local-path-postgres/planet-store-production-postgres.yaml
@@ -21,5 +23,6 @@ patchesStrategicMerge:
   - etcd-mariadb-k3s-patch.yaml
   - keycloak-hephy-pro-patch.yaml
   - temp-sto-stage-patch.yaml
+  - download-counts-patch.yaml
   - deis-hephy-workflow-patch.yaml
   - temp-store-patch.yaml
