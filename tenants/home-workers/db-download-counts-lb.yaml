@@ -5,7 +5,7 @@ metadata:
   namespace: demo
 spec:
   type: LoadBalancer
-  # loadBalancerIP: 10.17.12.240 # store-db.turkey.local
+  loadBalancerIP: 10.17.12.212 # dl-count-db.turkey.local
   ports:
   - name: primary
     port: 5432
