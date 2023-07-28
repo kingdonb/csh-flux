@@ -22,5 +22,5 @@ spec:
         release: kube-prometheus-stack
     updateStrategy: RollingUpdate
     configuration:
-      period: 2m0s
+      period: 20m0s
 #      rebootCommand: /bin/systemctl reboot
