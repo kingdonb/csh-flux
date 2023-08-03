@@ -8,4 +8,4 @@ spec:
   interval: 30m0s
   ref:
     branch: ksm-dashboard
-  url: https://github.com/kingdonb/flux2
+  url: https://github.com/fluxcd/flux2
