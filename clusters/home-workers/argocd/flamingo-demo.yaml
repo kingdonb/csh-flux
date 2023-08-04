@@ -1,0 +1,32 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: OCIRepository
+metadata:
+  name: fsa-demo
+  namespace: flux-system
+  annotations:
+    metadata.weave.works/flamingo-default-app: "https://localhost:8080/applications/argocd/default-app?view=tree"
+    metadata.weave.works/flamingo-fsa-installation: "https://localhost:8080/applications/argocd/fsa-installation?view=tree"
+    link.argocd.argoproj.io/external-link: "http://localhost:9001/oci/details?clusterName=Default&name=fsa-demo&namespace=flux-system"    
+spec:
+  interval: 30s
+  url: oci://ghcr.io/flux-subsystem-argo/flamingo/manifests
+  ref:
+    tag: v2.7
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: fsa-demo
+  namespace: flux-system
+  annotations:
+    metadata.weave.works/flamingo-fsa-demo: "https://localhost:8080/applications/argocd/fsa-demo?view=tree"
+    link.argocd.argoproj.io/external-link: "http://localhost:9001/kustomize/details?clusterName=Default&name=fsa-demo&namespace=flux-system"
+spec:
+  prune: true
+  interval: 2m
+  path: "./demo"
+  sourceRef:
+    kind: OCIRepository
+    name: fsa-demo
+  timeout: 3m
