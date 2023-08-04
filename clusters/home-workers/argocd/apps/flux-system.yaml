@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: flux-system
+  namespace: argocd
+spec:
+  destination:
+    namespace: flux-system
+    server: https://kubernetes.default.svc
+  source:
+    path: ./clusters/home-workers
+    repoURL: https://github.com/kingdonb/csh-flux
+    targetRevision: main
+  sources: []
+  project: default
+  syncPolicy:
+    syncOptions:
+    - ApplyOutOfSyncOnly=true
+    - FluxSubsystem=true

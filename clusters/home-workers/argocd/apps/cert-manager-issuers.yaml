@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cert-manager-issuers
+  namespace: argocd
+spec:
+  destination:
+    namespace: cert-manager
+    server: https://kubernetes.default.svc
+  source:
+    path: ./infrastructure/cert-manager-issuers
+    repoURL: https://github.com/kingdonb/csh-flux
+    targetRevision: main
+  sources: []
+  project: default
+  syncPolicy:
+    syncOptions:
+    - ApplyOutOfSyncOnly=true
+    - FluxSubsystem=true
