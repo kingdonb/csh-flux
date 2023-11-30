@@ -15,7 +15,7 @@ spec:
         namespace: flux-system
   values:
     tcp:
-      "2222": "vcluster-hephy-stg-turkey-local/deis-builder-x-deis-x-hephy-stg:2222"
+    # "2222": "deis/deis-builder:2222"
     controller:
       metrics:
         enabled: "true"
