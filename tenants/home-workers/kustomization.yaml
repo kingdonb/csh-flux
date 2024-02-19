@@ -4,12 +4,12 @@ kind: Kustomization
 resources:
   - ../base/local-path-mariadb/etcd-mixed-arch-k3s-mariadb.yaml
   - etcd-mixed-arch-k3s-lb.yaml
-  - ../base/local-path-mariadb/keycloak-hephy-pro-mariadb.yaml
-  - db-keycloak-hephy-pro-lb.yaml
+  # - ../base/local-path-mariadb/keycloak-hephy-pro-mariadb.yaml
+  # - db-keycloak-hephy-pro-lb.yaml
   - ../base/local-path-mariadb/temp-sto-stage-mariadb.yaml
   - db-temp-sto-stage-lb.yaml
-  - ../base/local-path-postgres/temp-store-postgres.yaml
-  - db-temp-store-lb.yaml
+  # - ../base/local-path-postgres/temp-store-postgres.yaml
+  # - db-temp-store-lb.yaml
   - ../base/local-path-postgres/download-counts-postgres.yaml
   - db-download-counts-lb.yaml
   - ../base/local-path-postgres/kuby-test-production-postgres.yaml
@@ -21,8 +21,8 @@ resources:
   - db-deis-hephy-workflow-lb.yaml
 patchesStrategicMerge:
   - etcd-mariadb-k3s-patch.yaml
-  - keycloak-hephy-pro-patch.yaml
+  # - keycloak-hephy-pro-patch.yaml
   - temp-sto-stage-patch.yaml
   - download-counts-patch.yaml
   - deis-hephy-workflow-patch.yaml
-  - temp-store-patch.yaml
+  # - temp-store-patch.yaml
