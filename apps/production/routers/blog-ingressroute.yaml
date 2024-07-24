@@ -17,7 +17,7 @@ spec:
       port: 80
 ---
 apiVersion: traefik.io/v1alpha1
-kind: IngressRouteTCP
+kind: IngressRoute
 metadata:
   name: blog
   namespace: traefik-production
@@ -25,9 +25,11 @@ spec:
   entryPoints:
     - websecure
   routes:
-  - match: HostSNI(`blog.teamhephy.info`)
+  - match: Host(`blog.teamhephy.info`)
+    kind: Rule
     services:
-    - name: blog-x-blog-x-hephy-stg
+    - kind: Service
+      name: blog-x-blog-x-hephy-stg
       namespace: vcluster-hephy-stg-turkey-local
       port: 80
   tls:
