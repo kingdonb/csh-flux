@@ -1,5 +1,5 @@
 ---
-apiVersion: traefik.containo.us/v1alpha1
+apiVersion: traefik.io/v1
 kind: IngressRoute
 metadata:
   name: yaateeh-dev-insecure
@@ -8,14 +8,14 @@ spec:
   entryPoints:
     - web
   routes:
-  - match: Host(`giovanni.yaateeh.dev`,`nwinter.yaateeh.dev`,`alys.yaateeh.dev`,`dan.yaateeh.dev`,`xenocid.yaateeh.dev`,`jordan.yaateeh.dev`,`alys.yaateeh.dev`,`dan.yaateeh.dev`,`xenocid.yaateeh.dev`,`jordan.yaateeh.dev`,`brian.yaateeh.dev`,`nick.yaateeh.dev`,`alex.yaateeh.dev`,`clarissa.yaateeh.dev`,`luke.yaateeh.dev`,`mike.yaateeh.dev`,`max.yaateeh.dev`,`jay.yaateeh.dev`,`sergii.yaateeh.dev`,`cole.yaateeh.dev`,`forrest.yaateeh.dev`,`chris.yaateeh.dev`,`echodaniel.yaateeh.dev`,`edyson.yaateeh.dev`,`clive.yaateeh.dev`,`byorgey.yaateeh.dev`,`kim.yaateeh.dev`,`kb.yaateeh.dev`,`kevin.yaateeh.dev`,`mbork.yaateeh.dev`,`shanaqui.yaateeh.dev`,`philip.yaateeh.dev`,`bee.yaateeh.dev`,`adam.yaateeh.dev`,`mary.yaateeh.dev`,`martin.yaateeh.dev`,`dreev.yaateeh.dev`,`aian.yaateeh.dev`,`yaateeh.dev`)
+  - match: Host(`giovanni.yaateeh.dev`) || Host(`nwinter.yaateeh.dev`) || Host(`alys.yaateeh.dev`) || Host(`dan.yaateeh.dev`) || Host(`xenocid.yaateeh.dev`) || Host(`jordan.yaateeh.dev`) || Host(`alys.yaateeh.dev`) || Host(`dan.yaateeh.dev`) || Host(`xenocid.yaateeh.dev`) || Host(`jordan.yaateeh.dev`) || Host(`brian.yaateeh.dev`) || Host(`nick.yaateeh.dev`) || Host(`alex.yaateeh.dev`) || Host(`clarissa.yaateeh.dev`) || Host(`luke.yaateeh.dev`) || Host(`mike.yaateeh.dev`) || Host(`max.yaateeh.dev`) || Host(`jay.yaateeh.dev`) || Host(`sergii.yaateeh.dev`) || Host(`cole.yaateeh.dev`) || Host(`forrest.yaateeh.dev`) || Host(`chris.yaateeh.dev`) || Host(`echodaniel.yaateeh.dev`) || Host(`edyson.yaateeh.dev`) || Host(`clive.yaateeh.dev`) || Host(`byorgey.yaateeh.dev`) || Host(`kim.yaateeh.dev`) || Host(`kb.yaateeh.dev`) || Host(`kevin.yaateeh.dev`) || Host(`mbork.yaateeh.dev`) || Host(`shanaqui.yaateeh.dev`) || Host(`philip.yaateeh.dev`) || Host(`bee.yaateeh.dev`) || Host(`adam.yaateeh.dev`) || Host(`mary.yaateeh.dev`) || Host(`martin.yaateeh.dev`) || Host(`dreev.yaateeh.dev`) || Host(`aian.yaateeh.dev`) || Host(`yaateeh.dev`)
     kind: Rule
     services:
     - name: commitsto-staging-x-commitsto-staging-x-hephy-stg
       namespace: vcluster-hephy-stg-turkey-local
       port: 80
 ---
-apiVersion: traefik.containo.us/v1alpha1
+apiVersion: traefik.io/v1
 kind: IngressRoute
 metadata:
   name: yaateeh-dev
@@ -24,7 +24,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-  - match: Host(`giovanni.yaateeh.dev`,`nwinter.yaateeh.dev`,`alys.yaateeh.dev`,`dan.yaateeh.dev`,`xenocid.yaateeh.dev`,`jordan.yaateeh.dev`,`alys.yaateeh.dev`,`dan.yaateeh.dev`,`xenocid.yaateeh.dev`,`jordan.yaateeh.dev`,`brian.yaateeh.dev`,`nick.yaateeh.dev`,`alex.yaateeh.dev`,`clarissa.yaateeh.dev`,`luke.yaateeh.dev`,`mike.yaateeh.dev`,`max.yaateeh.dev`,`jay.yaateeh.dev`,`sergii.yaateeh.dev`,`cole.yaateeh.dev`,`forrest.yaateeh.dev`,`chris.yaateeh.dev`,`echodaniel.yaateeh.dev`,`edyson.yaateeh.dev`,`clive.yaateeh.dev`,`byorgey.yaateeh.dev`,`kim.yaateeh.dev`,`kb.yaateeh.dev`,`kevin.yaateeh.dev`,`mbork.yaateeh.dev`,`shanaqui.yaateeh.dev`,`philip.yaateeh.dev`,`bee.yaateeh.dev`,`adam.yaateeh.dev`,`mary.yaateeh.dev`,`martin.yaateeh.dev`,`dreev.yaateeh.dev`,`aian.yaateeh.dev`,`yaateeh.dev`)
+  - match: Host(`giovanni.yaateeh.dev`) || Host(`nwinter.yaateeh.dev`) || Host(`alys.yaateeh.dev`) || Host(`dan.yaateeh.dev`) || Host(`xenocid.yaateeh.dev`) || Host(`jordan.yaateeh.dev`) || Host(`alys.yaateeh.dev`) || Host(`dan.yaateeh.dev`) || Host(`xenocid.yaateeh.dev`) || Host(`jordan.yaateeh.dev`) || Host(`brian.yaateeh.dev`) || Host(`nick.yaateeh.dev`) || Host(`alex.yaateeh.dev`) || Host(`clarissa.yaateeh.dev`) || Host(`luke.yaateeh.dev`) || Host(`mike.yaateeh.dev`) || Host(`max.yaateeh.dev`) || Host(`jay.yaateeh.dev`) || Host(`sergii.yaateeh.dev`) || Host(`cole.yaateeh.dev`) || Host(`forrest.yaateeh.dev`) || Host(`chris.yaateeh.dev`) || Host(`echodaniel.yaateeh.dev`) || Host(`edyson.yaateeh.dev`) || Host(`clive.yaateeh.dev`) || Host(`byorgey.yaateeh.dev`) || Host(`kim.yaateeh.dev`) || Host(`kb.yaateeh.dev`) || Host(`kevin.yaateeh.dev`) || Host(`mbork.yaateeh.dev`) || Host(`shanaqui.yaateeh.dev`) || Host(`philip.yaateeh.dev`) || Host(`bee.yaateeh.dev`) || Host(`adam.yaateeh.dev`) || Host(`mary.yaateeh.dev`) || Host(`martin.yaateeh.dev`) || Host(`dreev.yaateeh.dev`) || Host(`aian.yaateeh.dev`) || Host(`yaateeh.dev`)
     kind: Rule
     services:
     - name: commitsto-staging-x-commitsto-staging-x-hephy-stg
