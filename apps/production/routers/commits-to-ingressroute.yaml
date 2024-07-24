@@ -1,34 +1,34 @@
----
-apiVersion: traefik.io/v1alpha1
-kind: IngressRoute
-metadata:
-  name: commits-to-insecure
-  namespace: traefik-production
-spec:
-  entryPoints:
-    - web
-  routes:
-  - match: Host(`commits.to`) || Host(`giovanni.commits.to`) || Host(`nwinter.commits.to`) || Host(`patrick.commits.to`) || Host(`thameera.commits.to`) || Host(`madge.commits.to`) || Host(`xenocid.commits.to`) || Host(`alok.commits.to`) || Host(`luke.commits.to`) || Host(`eugeniobruno.commits.to`) || Host(`arti.commits.to`) || Host(`brian.commits.to`) || Host(`michael.commits.to`) || Host(`chris.commits.to`) || Host(`forrest.commits.to`) || Host(`byorgey.commits.to`) || Host(`az.commits.to`) || Host(`sergii.commits.to`) || Host(`kim.commits.to`) || Host(`edyson.commits.to`) || Host(`bee.commits.to`) || Host(`max.commits.to`) || Host(`kevin.commits.to`) || Host(`philip.commits.to`) || Host(`alex.commits.to`) || Host(`aian.commits.to`) || Host(`mbork.commits.to`) || Host(`shanaqui.commits.to`) || Host(`martin.commits.to`) || Host(`cole.commits.to`) || Host(`dan.commits.to`) || Host(`alys.commits.to`) || Host(`clive.commits.to`) || Host(`dreev.commits.to`) || Host(`jordan.commits.to`) || Host(`clarissa.commits.to`) || Host(`mary.commits.to`) || Host(`echodaniel.commits.to`) || Host(`adam.commits.to`) || Host(`elviejo79.commits.to`) || Host(`jade.commits.to`) || Host(`jay.commits.to`) || Host(`mike.commits.to`) || Host(`kb.commits.to`) || Host(`nick.commits.to`)
-    kind: Rule
-    services:
-    - name: commitsto-alpha-x-commitsto-alpha-x-hephy-stg
-      namespace: vcluster-hephy-stg-turkey-local
-      port: 80
----
-apiVersion: traefik.io/v1alpha1
-kind: IngressRoute
-metadata:
-  name: commits-to
-  namespace: traefik-production
-spec:
-  entryPoints:
-    - websecure
-  routes:
-  - match: Host(`commits.to`) || Host(`giovanni.commits.to`) || Host(`nwinter.commits.to`) || Host(`patrick.commits.to`) || Host(`thameera.commits.to`) || Host(`madge.commits.to`) || Host(`xenocid.commits.to`) || Host(`alok.commits.to`) || Host(`luke.commits.to`) || Host(`eugeniobruno.commits.to`) || Host(`arti.commits.to`) || Host(`brian.commits.to`) || Host(`michael.commits.to`) || Host(`chris.commits.to`) || Host(`forrest.commits.to`) || Host(`byorgey.commits.to`) || Host(`az.commits.to`) || Host(`sergii.commits.to`) || Host(`kim.commits.to`) || Host(`edyson.commits.to`) || Host(`bee.commits.to`) || Host(`max.commits.to`) || Host(`kevin.commits.to`) || Host(`philip.commits.to`) || Host(`alex.commits.to`) || Host(`aian.commits.to`) || Host(`mbork.commits.to`) || Host(`shanaqui.commits.to`) || Host(`martin.commits.to`) || Host(`cole.commits.to`) || Host(`dan.commits.to`) || Host(`alys.commits.to`) || Host(`clive.commits.to`) || Host(`dreev.commits.to`) || Host(`jordan.commits.to`) || Host(`clarissa.commits.to`) || Host(`mary.commits.to`) || Host(`echodaniel.commits.to`) || Host(`adam.commits.to`) || Host(`elviejo79.commits.to`) || Host(`jade.commits.to`) || Host(`jay.commits.to`) || Host(`mike.commits.to`) || Host(`kb.commits.to`) || Host(`nick.commits.to`)
-    kind: Rule
-    services:
-    - name: commitsto-alpha-x-commitsto-alpha-x-hephy-stg
-      namespace: vcluster-hephy-stg-turkey-local
-      port: 80
-  tls:
-    certResolver: myresolver
+# ---
+# apiVersion: traefik.io/v1alpha1
+# kind: IngressRoute
+# metadata:
+#   name: commits-to-insecure
+#   namespace: traefik-production
+# spec:
+#   entryPoints:
+#     - web
+#   routes:
+#   - match: Host(`commits.to`) || Host(`giovanni.commits.to`) || Host(`nwinter.commits.to`) || Host(`patrick.commits.to`) || Host(`thameera.commits.to`) || Host(`madge.commits.to`) || Host(`xenocid.commits.to`) || Host(`alok.commits.to`) || Host(`luke.commits.to`) || Host(`eugeniobruno.commits.to`) || Host(`arti.commits.to`) || Host(`brian.commits.to`) || Host(`michael.commits.to`) || Host(`chris.commits.to`) || Host(`forrest.commits.to`) || Host(`byorgey.commits.to`) || Host(`az.commits.to`) || Host(`sergii.commits.to`) || Host(`kim.commits.to`) || Host(`edyson.commits.to`) || Host(`bee.commits.to`) || Host(`max.commits.to`) || Host(`kevin.commits.to`) || Host(`philip.commits.to`) || Host(`alex.commits.to`) || Host(`aian.commits.to`) || Host(`mbork.commits.to`) || Host(`shanaqui.commits.to`) || Host(`martin.commits.to`) || Host(`cole.commits.to`) || Host(`dan.commits.to`) || Host(`alys.commits.to`) || Host(`clive.commits.to`) || Host(`dreev.commits.to`) || Host(`jordan.commits.to`) || Host(`clarissa.commits.to`) || Host(`mary.commits.to`) || Host(`echodaniel.commits.to`) || Host(`adam.commits.to`) || Host(`elviejo79.commits.to`) || Host(`jade.commits.to`) || Host(`jay.commits.to`) || Host(`mike.commits.to`) || Host(`kb.commits.to`) || Host(`nick.commits.to`)
+#     kind: Rule
+#     services:
+#     - name: commitsto-alpha-x-commitsto-alpha-x-hephy-stg
+#       namespace: vcluster-hephy-stg-turkey-local
+#       port: 80
+# ---
+# apiVersion: traefik.io/v1alpha1
+# kind: IngressRoute
+# metadata:
+#   name: commits-to
+#   namespace: traefik-production
+# spec:
+#   entryPoints:
+#     - websecure
+#   routes:
+#   - match: Host(`commits.to`) || Host(`giovanni.commits.to`) || Host(`nwinter.commits.to`) || Host(`patrick.commits.to`) || Host(`thameera.commits.to`) || Host(`madge.commits.to`) || Host(`xenocid.commits.to`) || Host(`alok.commits.to`) || Host(`luke.commits.to`) || Host(`eugeniobruno.commits.to`) || Host(`arti.commits.to`) || Host(`brian.commits.to`) || Host(`michael.commits.to`) || Host(`chris.commits.to`) || Host(`forrest.commits.to`) || Host(`byorgey.commits.to`) || Host(`az.commits.to`) || Host(`sergii.commits.to`) || Host(`kim.commits.to`) || Host(`edyson.commits.to`) || Host(`bee.commits.to`) || Host(`max.commits.to`) || Host(`kevin.commits.to`) || Host(`philip.commits.to`) || Host(`alex.commits.to`) || Host(`aian.commits.to`) || Host(`mbork.commits.to`) || Host(`shanaqui.commits.to`) || Host(`martin.commits.to`) || Host(`cole.commits.to`) || Host(`dan.commits.to`) || Host(`alys.commits.to`) || Host(`clive.commits.to`) || Host(`dreev.commits.to`) || Host(`jordan.commits.to`) || Host(`clarissa.commits.to`) || Host(`mary.commits.to`) || Host(`echodaniel.commits.to`) || Host(`adam.commits.to`) || Host(`elviejo79.commits.to`) || Host(`jade.commits.to`) || Host(`jay.commits.to`) || Host(`mike.commits.to`) || Host(`kb.commits.to`) || Host(`nick.commits.to`)
+#     kind: Rule
+#     services:
+#     - name: commitsto-alpha-x-commitsto-alpha-x-hephy-stg
+#       namespace: vcluster-hephy-stg-turkey-local
+#       port: 80
+#   tls:
+#     certResolver: myresolver
