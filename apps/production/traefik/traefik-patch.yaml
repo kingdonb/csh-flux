@@ -18,8 +18,9 @@ spec:
             - "--providers.kubernetescrd"
             - "--providers.kubernetescrd.allowCrossNamespace=true"
             - "--certificatesresolvers.myresolver.acme.storage=/data/acme.json"
-            - "--certificatesresolvers.myresolver.acme.httpchallenge=true"
-            - "--certificatesresolvers.myresolver.acme.httpchallenge.entrypoint=web"
+            - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
+            # - "--certificatesresolvers.myresolver.acme.httpchallenge=true"
+            # - "--certificatesresolvers.myresolver.acme.httpchallenge.entrypoint=web"
             - "--certificatesresolvers.myresolver.acme.email=kingdon+acme@tuesdaystudios.com"
             - "--certificatesresolvers.myresolver.acme.caServer=https://acme-staging-v02.api.letsencrypt.org/directory"
 
