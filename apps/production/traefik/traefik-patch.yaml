@@ -9,22 +9,24 @@ spec:
       containers:
         - name: traefik
           args:
-            - "--log.level=DEBUG"
             - "--entryPoints.web.address=:8000/tcp"
             - "--entryPoints.websecure.address=:8443/tcp"
             - "--entryPoints.traefik.address=:9000/tcp"
             - "--api=true"
             - "--api.dashboard=true"
-            - "--api.insecure=true"
             - "--ping=true"
             - "--providers.kubernetescrd"
             - "--providers.kubernetescrd.allowCrossNamespace=true"
+            - "--providers.kubernetesingress=true"
+            - "--providers.kubernetesingress.allowEmptyServices=true"
+            - "--providers.kubernetesingress.ingressclass=traefik"
             - "--certificatesresolvers.myresolver.acme.storage=/data/acme.json"
             - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
-            - "--certificatesresolvers.myresolver.acme.httpchallenge=true"
-            - "--certificatesresolvers.myresolver.acme.httpchallenge.entrypoint=web"
             - "--certificatesresolvers.myresolver.acme.email=kingdon+acme@tuesdaystudios.com"
-            # - "--certificatesresolvers.myresolver.acme.caServer=https://acme-staging-v02.api.letsencrypt.org/directory"
+            - "--certificatesresolvers.myresolver.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory"
+            - "--certificatesresolvers.prodresolver.acme.storage=/data/acme-prod.json"
+            - "--certificatesresolvers.prodresolver.acme.tlschallenge=true"
+            - "--certificatesresolvers.prodresolver.acme.email=kingdon+acme@tuesdaystudios.com"
 
 ---
 apiVersion: v1
