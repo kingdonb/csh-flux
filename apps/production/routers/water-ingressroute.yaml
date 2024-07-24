@@ -33,4 +33,4 @@ spec:
       namespace: vcluster-hephy-stg-turkey-local
       port: 80
   tls:
-    certResolver: prodresolver
+    certResolver: myresolver
